@@ -7,21 +7,80 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E2AB2792083A93A00AC44E3 /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AB2782083A93A00AC44E3 /* ImageTextView.swift */; };
+		4E2AB27B2083A98100AC44E3 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AB27A2083A98100AC44E3 /* Style.swift */; };
+		4E2AB27E2083ACAB00AC44E3 /* PermissionRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AB27D2083ACAB00AC44E3 /* PermissionRequestView.swift */; };
+		4E2AB2802083AE5C00AC44E3 /* PermissionRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AB27F2083AE5C00AC44E3 /* PermissionRequestViewModel.swift */; };
+		4E2AB2822083B82C00AC44E3 /* PermissionRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AB2812083B82C00AC44E3 /* PermissionRequestViewController.swift */; };
+		4E2AB2852083B92600AC44E3 /* HealthStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AB2842083B92600AC44E3 /* HealthStoreProtocol.swift */; };
+		4E2AB2882083B93D00AC44E3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2AB2872083B93D00AC44E3 /* HealthKit.framework */; };
+		4E2AB28A2083BC8E00AC44E3 /* FitnessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AB2892083BC8E00AC44E3 /* FitnessService.swift */; };
+		4E2AB28D2083C07200AC44E3 /* Fitness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AB28C2083C07200AC44E3 /* Fitness.swift */; };
+		4E2AB28F2083D22900AC44E3 /* FitnessRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AB28E2083D22900AC44E3 /* FitnessRepository.swift */; };
+		4E2AB2912083D42800AC44E3 /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AB2902083D42800AC44E3 /* ActivityViewModel.swift */; };
+		4E2AB2942083D46900AC44E3 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AB2932083D46900AC44E3 /* ListView.swift */; };
+		4E2AB2962083D4A300AC44E3 /* WorkoutViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2AB2952083D4A300AC44E3 /* WorkoutViewCell.xib */; };
+		4E2AB2982083D68800AC44E3 /* WorkoutViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AB2972083D68800AC44E3 /* WorkoutViewCell.swift */; };
+		4E2AB29C2083DC9100AC44E3 /* ResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AB29B2083DC9100AC44E3 /* ResumeViewController.swift */; };
+		4E2AB29E2083DCE200AC44E3 /* ResumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2AB29D2083DCE200AC44E3 /* ResumeView.swift */; };
+		4E2AB2A02083DD0000AC44E3 /* ResumeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2AB29F2083DD0000AC44E3 /* ResumeView.xib */; };
+		4EA00FF9207C3EBE00329BE8 /* UIImage+WithColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA00FF8207C3EBE00329BE8 /* UIImage+WithColor.swift */; };
+		4EA00FFB207C3F1300329BE8 /* TintButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA00FFA207C3F1300329BE8 /* TintButton.swift */; };
+		4EA00FFD207C406600329BE8 /* NSAttributedString+FontColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA00FFC207C406600329BE8 /* NSAttributedString+FontColor.swift */; };
+		4EA00FFF207C43DB00329BE8 /* ActivityViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA00FFE207C43DB00329BE8 /* ActivityViewItem.swift */; };
+		4EA01002207C481600329BE8 /* Appereance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA01001207C481600329BE8 /* Appereance.swift */; };
+		4EA01004207C539200329BE8 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA01003207C539200329BE8 /* ActivityView.swift */; };
+		4EA01006207C5B9B00329BE8 /* BaseViewTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA01005207C5B9B00329BE8 /* BaseViewTemplate.swift */; };
 		4EDF875F207A65E000DF08FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF875E207A65E000DF08FC /* AppDelegate.swift */; };
-		4EDF8761207A65E000DF08FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF8760207A65E000DF08FC /* ViewController.swift */; };
 		4EDF8764207A65E000DF08FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF8762207A65E000DF08FC /* Main.storyboard */; };
 		4EDF8766207A65E000DF08FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF8765207A65E000DF08FC /* Assets.xcassets */; };
 		4EDF8769207A65E000DF08FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF8767207A65E000DF08FC /* LaunchScreen.storyboard */; };
+		4EDF8771207A698700DF08FC /* ActivityViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF8770207A698700DF08FC /* ActivityViewItem.xib */; };
+		4EDF8776207A733A00DF08FC /* RunMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF8775207A733A00DF08FC /* RunMapViewController.swift */; };
+		4EDF8779207A73ED00DF08FC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDF8778207A73ED00DF08FC /* MapKit.framework */; };
+		4EDF877C207A74DA00DF08FC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF877B207A74DA00DF08FC /* SignInViewController.swift */; };
+		4EDF877F207A76EC00DF08FC /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF877E207A76EC00DF08FC /* ActivityViewController.swift */; };
+		4EDF8782207A7AEB00DF08FC /* ActivityViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF8781207A7AEB00DF08FC /* ActivityViewFooter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E2AB2782083A93A00AC44E3 /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
+		4E2AB27A2083A98100AC44E3 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		4E2AB27D2083ACAB00AC44E3 /* PermissionRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionRequestView.swift; sourceTree = "<group>"; };
+		4E2AB27F2083AE5C00AC44E3 /* PermissionRequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionRequestViewModel.swift; sourceTree = "<group>"; };
+		4E2AB2812083B82C00AC44E3 /* PermissionRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionRequestViewController.swift; sourceTree = "<group>"; };
+		4E2AB2842083B92600AC44E3 /* HealthStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStoreProtocol.swift; sourceTree = "<group>"; };
+		4E2AB2862083B93D00AC44E3 /* Run.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Run.entitlements; sourceTree = "<group>"; };
+		4E2AB2872083B93D00AC44E3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		4E2AB2892083BC8E00AC44E3 /* FitnessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessService.swift; sourceTree = "<group>"; };
+		4E2AB28C2083C07200AC44E3 /* Fitness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fitness.swift; sourceTree = "<group>"; };
+		4E2AB28E2083D22900AC44E3 /* FitnessRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessRepository.swift; sourceTree = "<group>"; };
+		4E2AB2902083D42800AC44E3 /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
+		4E2AB2932083D46900AC44E3 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		4E2AB2952083D4A300AC44E3 /* WorkoutViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkoutViewCell.xib; sourceTree = "<group>"; };
+		4E2AB2972083D68800AC44E3 /* WorkoutViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewCell.swift; sourceTree = "<group>"; };
+		4E2AB29B2083DC9100AC44E3 /* ResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeViewController.swift; sourceTree = "<group>"; };
+		4E2AB29D2083DCE200AC44E3 /* ResumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeView.swift; sourceTree = "<group>"; };
+		4E2AB29F2083DD0000AC44E3 /* ResumeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResumeView.xib; sourceTree = "<group>"; };
+		4EA00FF8207C3EBE00329BE8 /* UIImage+WithColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+WithColor.swift"; sourceTree = "<group>"; };
+		4EA00FFA207C3F1300329BE8 /* TintButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintButton.swift; sourceTree = "<group>"; };
+		4EA00FFC207C406600329BE8 /* NSAttributedString+FontColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+FontColor.swift"; sourceTree = "<group>"; };
+		4EA00FFE207C43DB00329BE8 /* ActivityViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewItem.swift; sourceTree = "<group>"; };
+		4EA01001207C481600329BE8 /* Appereance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appereance.swift; sourceTree = "<group>"; };
+		4EA01003207C539200329BE8 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		4EA01005207C5B9B00329BE8 /* BaseViewTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewTemplate.swift; sourceTree = "<group>"; };
 		4EDF875B207A65E000DF08FC /* Run.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Run.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EDF875E207A65E000DF08FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4EDF8760207A65E000DF08FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4EDF8763207A65E000DF08FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4EDF8765207A65E000DF08FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EDF8768207A65E000DF08FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EDF876A207A65E000DF08FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EDF8770207A698700DF08FC /* ActivityViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityViewItem.xib; sourceTree = "<group>"; };
+		4EDF8775207A733A00DF08FC /* RunMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunMapViewController.swift; sourceTree = "<group>"; };
+		4EDF8778207A73ED00DF08FC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4EDF877B207A74DA00DF08FC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		4EDF877E207A76EC00DF08FC /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		4EDF8781207A7AEB00DF08FC /* ActivityViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewFooter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +88,86 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EDF8779207A73ED00DF08FC /* MapKit.framework in Frameworks */,
+				4E2AB2882083B93D00AC44E3 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E2AB27C2083AC9700AC44E3 /* Permission */ = {
+			isa = PBXGroup;
+			children = (
+				4E2AB27D2083ACAB00AC44E3 /* PermissionRequestView.swift */,
+				4E2AB27F2083AE5C00AC44E3 /* PermissionRequestViewModel.swift */,
+				4E2AB2812083B82C00AC44E3 /* PermissionRequestViewController.swift */,
+			);
+			path = Permission;
+			sourceTree = "<group>";
+		};
+		4E2AB2832083B91B00AC44E3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4E2AB2842083B92600AC44E3 /* HealthStoreProtocol.swift */,
+				4E2AB2892083BC8E00AC44E3 /* FitnessService.swift */,
+				4E2AB28E2083D22900AC44E3 /* FitnessRepository.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4E2AB28B2083C06600AC44E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4E2AB28C2083C07200AC44E3 /* Fitness.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4E2AB2922083D44700AC44E3 /* Workouts */ = {
+			isa = PBXGroup;
+			children = (
+				4E2AB2932083D46900AC44E3 /* ListView.swift */,
+				4E2AB2952083D4A300AC44E3 /* WorkoutViewCell.xib */,
+				4E2AB2972083D68800AC44E3 /* WorkoutViewCell.swift */,
+			);
+			path = Workouts;
+			sourceTree = "<group>";
+		};
+		4E2AB2992083DC7100AC44E3 /* Resume */ = {
+			isa = PBXGroup;
+			children = (
+				4E2AB29B2083DC9100AC44E3 /* ResumeViewController.swift */,
+				4E2AB29D2083DCE200AC44E3 /* ResumeView.swift */,
+				4E2AB29F2083DD0000AC44E3 /* ResumeView.xib */,
+			);
+			path = Resume;
+			sourceTree = "<group>";
+		};
+		4EA00FF7207C3E9400329BE8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4EA00FF8207C3EBE00329BE8 /* UIImage+WithColor.swift */,
+				4EA00FFC207C406600329BE8 /* NSAttributedString+FontColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4EA01000207C46D400329BE8 /* Appereance */ = {
+			isa = PBXGroup;
+			children = (
+				4EA01001207C481600329BE8 /* Appereance.swift */,
+				4E2AB27A2083A98100AC44E3 /* Style.swift */,
+			);
+			path = Appereance;
+			sourceTree = "<group>";
+		};
 		4EDF8752207A65E000DF08FC = {
 			isa = PBXGroup;
 			children = (
 				4EDF875D207A65E000DF08FC /* Run */,
 				4EDF875C207A65E000DF08FC /* Products */,
+				4EDF8777207A73ED00DF08FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +182,89 @@
 		4EDF875D207A65E000DF08FC /* Run */ = {
 			isa = PBXGroup;
 			children = (
+				4E2AB2862083B93D00AC44E3 /* Run.entitlements */,
+				4E2AB28B2083C06600AC44E3 /* Models */,
+				4E2AB2832083B91B00AC44E3 /* Services */,
+				4EA01000207C46D400329BE8 /* Appereance */,
+				4EA00FF7207C3E9400329BE8 /* Extensions */,
+				4EDF8780207A7AC400DF08FC /* Views */,
+				4EDF8772207A72E700DF08FC /* Scenes */,
 				4EDF875E207A65E000DF08FC /* AppDelegate.swift */,
-				4EDF8760207A65E000DF08FC /* ViewController.swift */,
 				4EDF8762207A65E000DF08FC /* Main.storyboard */,
 				4EDF8765207A65E000DF08FC /* Assets.xcassets */,
 				4EDF8767207A65E000DF08FC /* LaunchScreen.storyboard */,
 				4EDF876A207A65E000DF08FC /* Info.plist */,
 			);
 			path = Run;
+			sourceTree = "<group>";
+		};
+		4EDF8772207A72E700DF08FC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4E2AB2992083DC7100AC44E3 /* Resume */,
+				4E2AB2922083D44700AC44E3 /* Workouts */,
+				4E2AB27C2083AC9700AC44E3 /* Permission */,
+				4EDF877D207A767C00DF08FC /* Activity */,
+				4EDF877A207A74AA00DF08FC /* SignIn */,
+				4EDF8773207A72F400DF08FC /* Map */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		4EDF8773207A72F400DF08FC /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				4EDF8774207A731F00DF08FC /* Controllers */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		4EDF8774207A731F00DF08FC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4EDF8775207A733A00DF08FC /* RunMapViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4EDF8777207A73ED00DF08FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E2AB2872083B93D00AC44E3 /* HealthKit.framework */,
+				4EDF8778207A73ED00DF08FC /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EDF877A207A74AA00DF08FC /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				4EDF877B207A74DA00DF08FC /* SignInViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		4EDF877D207A767C00DF08FC /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				4EDF877E207A76EC00DF08FC /* ActivityViewController.swift */,
+				4EDF8770207A698700DF08FC /* ActivityViewItem.xib */,
+				4E2AB2902083D42800AC44E3 /* ActivityViewModel.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		4EDF8780207A7AC400DF08FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4EDF8781207A7AEB00DF08FC /* ActivityViewFooter.swift */,
+				4EA00FFA207C3F1300329BE8 /* TintButton.swift */,
+				4EA00FFE207C43DB00329BE8 /* ActivityViewItem.swift */,
+				4EA01003207C539200329BE8 /* ActivityView.swift */,
+				4EA01005207C5B9B00329BE8 /* BaseViewTemplate.swift */,
+				4E2AB2782083A93A00AC44E3 /* ImageTextView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,12 +294,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Douglas Taquary";
 				TargetAttributes = {
 					4EDF875A207A65E000DF08FC = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -124,7 +335,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EDF8769207A65E000DF08FC /* LaunchScreen.storyboard in Resources */,
+				4EDF8771207A698700DF08FC /* ActivityViewItem.xib in Resources */,
 				4EDF8766207A65E000DF08FC /* Assets.xcassets in Resources */,
+				4E2AB2A02083DD0000AC44E3 /* ResumeView.xib in Resources */,
+				4E2AB2962083D4A300AC44E3 /* WorkoutViewCell.xib in Resources */,
 				4EDF8764207A65E000DF08FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,8 +350,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EDF8761207A65E000DF08FC /* ViewController.swift in Sources */,
+				4E2AB2792083A93A00AC44E3 /* ImageTextView.swift in Sources */,
+				4E2AB28A2083BC8E00AC44E3 /* FitnessService.swift in Sources */,
+				4EA01004207C539200329BE8 /* ActivityView.swift in Sources */,
+				4E2AB29E2083DCE200AC44E3 /* ResumeView.swift in Sources */,
+				4E2AB2802083AE5C00AC44E3 /* PermissionRequestViewModel.swift in Sources */,
+				4EA00FFF207C43DB00329BE8 /* ActivityViewItem.swift in Sources */,
+				4E2AB2822083B82C00AC44E3 /* PermissionRequestViewController.swift in Sources */,
+				4EDF8782207A7AEB00DF08FC /* ActivityViewFooter.swift in Sources */,
+				4E2AB2942083D46900AC44E3 /* ListView.swift in Sources */,
+				4E2AB2912083D42800AC44E3 /* ActivityViewModel.swift in Sources */,
+				4E2AB28F2083D22900AC44E3 /* FitnessRepository.swift in Sources */,
+				4EA00FFB207C3F1300329BE8 /* TintButton.swift in Sources */,
+				4E2AB28D2083C07200AC44E3 /* Fitness.swift in Sources */,
+				4E2AB27B2083A98100AC44E3 /* Style.swift in Sources */,
+				4E2AB29C2083DC9100AC44E3 /* ResumeViewController.swift in Sources */,
+				4EA00FF9207C3EBE00329BE8 /* UIImage+WithColor.swift in Sources */,
+				4E2AB2852083B92600AC44E3 /* HealthStoreProtocol.swift in Sources */,
+				4EDF877C207A74DA00DF08FC /* SignInViewController.swift in Sources */,
 				4EDF875F207A65E000DF08FC /* AppDelegate.swift in Sources */,
+				4EDF8776207A733A00DF08FC /* RunMapViewController.swift in Sources */,
+				4EA01002207C481600329BE8 /* Appereance.swift in Sources */,
+				4EA00FFD207C406600329BE8 /* NSAttributedString+FontColor.swift in Sources */,
+				4E2AB27E2083ACAB00AC44E3 /* PermissionRequestView.swift in Sources */,
+				4EDF877F207A76EC00DF08FC /* ActivityViewController.swift in Sources */,
+				4E2AB2982083D68800AC44E3 /* WorkoutViewCell.swift in Sources */,
+				4EA01006207C5B9B00329BE8 /* BaseViewTemplate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +415,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -184,6 +423,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -234,6 +474,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -241,6 +482,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -274,7 +516,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Run/Run.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6V95FQX348;
 				INFOPLIST_FILE = Run/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.douglast.Run;
@@ -288,7 +532,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Run/Run.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6V95FQX348;
 				INFOPLIST_FILE = Run/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.douglast.Run;
