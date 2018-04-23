@@ -21,28 +21,21 @@ public class PermissionRequestViewController: UIViewController {
         return self.view as! PermissionRequestView
     }
     
-    override public func loadView()
-    {
+    override public func loadView() {
         let view = PermissionRequestView()
         self.view = view
     }
     
-    override public func viewDidLoad()
-    {
+    override public func viewDidLoad() {
         let viewModel = PermissionRequestViewModel { [weak self] in
             self?.didFinish()
         }
         
         theView.viewModel = viewModel
     }
+
     
-    override public func viewDidLayoutSubviews()
-    {
-        theView.topOffset = topLayoutGuide.length
-    }
-    
-    func didFinish()
-    {
+    func didFinish() {
         self.delegate?.didFinish(on: self)
     }
     

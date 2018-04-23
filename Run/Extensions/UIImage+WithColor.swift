@@ -10,8 +10,7 @@ import UIKit
 
 extension UIImage {
     
-    static func image(with color: UIColor) -> UIImage
-    {
+    static func image(with color: UIColor) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
         let renderer = UIGraphicsImageRenderer(bounds: rect)
         

@@ -9,7 +9,7 @@
 import UIKit
 import HealthKit
 
-public class FitnessService {
+public class FitnessService: FitnessRepository {
     
     public enum Error: Swift.Error {
         case unableToDelete
@@ -36,8 +36,7 @@ public class FitnessService {
         fetch(entries: nil, completion)
     }
     
-    public func fetch(entries: Int? = nil, _ completion: @escaping (_ results: [Fitness]) -> Void)
-    {
+    public func fetch(entries: Int? = nil, _ completion: @escaping (_ results: [Fitness]) -> Void) {
         let startDate = healthStore.earliestPermittedSampleDate()
         let endDate = Date()
         
@@ -76,8 +75,7 @@ public class FitnessService {
     
     // MARK: - Save
     public func save(_ workout: Fitness,
-                     completion: @escaping (_ error: Swift.Error?) -> Void)
-    {
+                     completion: @escaping (_ error: Swift.Error?) -> Void) {
         let distance = HKQuantity(unit: .meterUnit(with: .deca),
                                   doubleValue: workout.distance.value)
         
@@ -94,9 +92,8 @@ public class FitnessService {
     }
     
     // MARK: - Delete
-    public func delete(_ mass: Fitness, completion: @escaping (_ error: Swift.Error?) -> Void)
-    {
-        guard case let .permanent(uuid) = mass.status else {
+    public func delete(_ workout: Fitness, completion: @escaping (_ error: Swift.Error?) -> Void) {
+        guard case let .permanent(uuid) = workout.status else {
             completion(Error.unableToDelete)
             return
         }
@@ -130,8 +127,7 @@ public class FitnessService {
         return status
     }
     
-    public func requestAuthorization(_ completion: @escaping (_ error: Swift.Error?) -> Void )
-    {
+    public func requestAuthorization(_ completion: @escaping (_ error: Swift.Error?) -> Void ) {
         let workoutSet = Set<HKSampleType>(arrayLiteral: distanceType)
         
         healthStore.requestAuthorization(toShare: workoutSet,
@@ -162,8 +158,7 @@ public class FitnessService {
     var workoutObserverStarted = false
     
     @available(watchOS, unavailable)
-    func startObservingWorkout()
-    {
+    func startObservingWorkout() {
         #if os(iOS)
         guard workoutObserverStarted == false else {
             return
@@ -192,8 +187,7 @@ public class FitnessService {
     var appOpenObserver: NSObjectProtocol? = nil
     
     @available(watchOS, unavailable)
-    func startObservingAppOpen()
-    {
+    func startObservingAppOpen() {
         #if os(iOS)
         guard authorizationStatus != .authorized,
             appOpenObserver == nil else {
@@ -220,5 +214,6 @@ public class FitnessService {
 // MARK: - Notifications
 extension NSNotification.Name {
     public static let FitnessServiceDidUpdate: NSNotification.Name =  NSNotification.Name(rawValue: "FitnessServiceDidUpdate")
+    public static let ActivityTimerDidUpdate: NSNotification.Name =  NSNotification.Name(rawValue: "ActivityTimerDidUpdate")
 }
 

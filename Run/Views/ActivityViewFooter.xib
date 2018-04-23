@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActivityViewFooter" customModule="Run" customModuleProvider="target">
+            <connections>
+                <outlet property="startButton" destination="ncF-aJ-8cX" id="b0t-iu-Tu3"/>
+                <outlet property="stopButton" destination="CWs-V1-Q8Z" id="Hwz-4k-7cI"/>
+                <outlet property="view" destination="1nn-DU-68v" id="uMK-QM-atp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1nn-DU-68v">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWs-V1-Q8Z">
+                    <rect key="frame" x="100" y="48" width="64" height="64"/>
+                    <color key="backgroundColor" red="0.97699779269999998" green="0.2254476547" blue="0.21768909689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="cz9-fQ-Vm1"/>
+                        <constraint firstAttribute="height" constant="64" id="d5g-gM-iXD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="PARAR">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTapStop:" destination="-1" eventType="touchUpInside" id="Ob9-Za-Le5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncF-aJ-8cX">
+                    <rect key="frame" x="211" y="48" width="64" height="64"/>
+                    <color key="backgroundColor" red="0.19334197040000001" green="0.72654658559999996" blue="0.2598522902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="8Cy-tH-Jci"/>
+                        <constraint firstAttribute="height" constant="64" id="iQI-Cz-JYs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="INICIAR">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTapStart:" destination="-1" eventType="touchUpInside" id="L6h-E5-pgz"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.050980392159999999" green="0.050000000750000002" blue="0.050000000750000002" alpha="0.75" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="CWs-V1-Q8Z" firstAttribute="centerY" secondItem="1nn-DU-68v" secondAttribute="centerY" id="6Ea-2Z-Vvv"/>
+                <constraint firstItem="CWs-V1-Q8Z" firstAttribute="leading" secondItem="HfA-dk-W98" secondAttribute="leading" constant="100" id="BG4-WW-B5w"/>
+                <constraint firstItem="ncF-aJ-8cX" firstAttribute="centerY" secondItem="1nn-DU-68v" secondAttribute="centerY" id="Nn7-kS-Ah5"/>
+                <constraint firstItem="HfA-dk-W98" firstAttribute="trailing" secondItem="ncF-aJ-8cX" secondAttribute="trailing" constant="100" id="zWv-mR-bYx"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="HfA-dk-W98"/>
+            <point key="canvasLocation" x="209.5" y="-249"/>
+        </view>
+    </objects>
+</document>

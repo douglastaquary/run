@@ -40,8 +40,7 @@ public class ImageTextView: UIView {
         }
     }
     
-    override public init(frame: CGRect)
-    {
+    override public init(frame: CGRect) {
         viewModel = EmptyViewModel()
         super.init(frame: frame)
         setUp()
@@ -53,8 +52,7 @@ public class ImageTextView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setUp()
-    {
+    func setUp() {
         let contentView = self
         
         let stackView = UIStackView()

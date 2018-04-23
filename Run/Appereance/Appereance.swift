@@ -13,8 +13,8 @@ struct Apperance{
     
     static func customizeNavigationBar() {
         let navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.tintColor = .black
-        navigationBarAppearace.layer.opacity = 0.75
+        navigationBarAppearace.tintColor = Style().tintColor
+        navigationBarAppearace.barTintColor = .black
         navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.green ]
     }
     

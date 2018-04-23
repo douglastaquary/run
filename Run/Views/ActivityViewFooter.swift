@@ -8,72 +8,50 @@
 
 import UIKit
 
-public class ActivityViewFooter: UIView {
-    
-    var stopButton: UIButton = {
-        let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 64, height: 64))
-       return btn
-    }()
-    
-    var startButton: UIButton = {
-        let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 64, height: 64))
-        return btn
-    }()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupView()
-    }
+public class ActivityViewFooter: BaseViewTemplate {
 
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    @IBOutlet weak var stopButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
+    
+    var userActivityState = UserActivityState.stop
+    
+    public var viewModel: ActivityViewModelProtocol = ActivityViewModel() {
+        didSet {
+            updateView()
+        }
     }
     
-    func setupView() {
-        let contentView = self
-        let grid: CGFloat = 8
-        
-        contentView.backgroundColor = UIColor.black
-        contentView.layer.opacity = 0.75
-        
-        stopButton.translatesAutoresizingMaskIntoConstraints = false
-        stopButton.layer.cornerRadius = 12
-        stopButton.backgroundColor = .red
-        stopButton.layer.borderColor = UIColor.clear.cgColor
-        
-        startButton.translatesAutoresizingMaskIntoConstraints = false
-        startButton.layer.cornerRadius = 12
-        startButton.backgroundColor = .green
+    public override func awakeFromNib() {
+        updateView()
+    }
+    
+    func updateView() {
+        managerStateButton(with: userActivityState)
+    }
+    
+    func managerStateButton(with state: UserActivityState) {
+        startButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+        startButton.backgroundColor = state == .stop ? Style().tintColor : .orange
         startButton.layer.borderColor = UIColor.clear.cgColor
+        startButton.setTitle(state == .stop ? "INICIAR" : "PAUSAR", for: .normal)
+    }
+    
+    @IBAction func didTapStop(_ sender: Any) {
+        viewModel.didTapStopAction(Fitness())
+    }
+    
+    @IBAction func didTapStart(_ sender: Any) {
         
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = grid * grid
-        stackView.addArrangedSubview(stopButton)
-        stackView.addArrangedSubview(startButton)
+        viewModel.didTapStartAction()
+
+        if userActivityState == .stop {
+            managerStateButton(with: UserActivityState.running)
+            userActivityState = .running
+        } else {
+            managerStateButton(with: UserActivityState.stop)
+            userActivityState = .stop
+        }
         
-        contentView.addSubview(stackView)
-        
-        stopButton.addTarget(self, action: #selector(didTapStop), for: .touchUpInside)
-        startButton.addTarget(self, action: #selector(didTapStart(with:)), for: .touchUpInside)
     }
-    
-    
-    func stateButtonSetup(with state: Bool) {
-        startButton.layer.cornerRadius = 12
-        startButton.backgroundColor = state ? .green : .orange
-        startButton.layer.borderColor = UIColor.clear.cgColor
-    }
-    
-    
-    @objc func didTapStop() {
-        print("Stop button..")
-    }
-    
-    @objc func didTapStart(with state: Bool) {
-        stateButtonSetup(with: state)
-    }
-    		
-    
-    
+  
 }

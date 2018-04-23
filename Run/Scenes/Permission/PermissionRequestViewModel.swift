@@ -36,7 +36,7 @@ extension PermissionRequestViewModel {
     public init(didTapOkAction: @escaping () -> Void) {
         let style: StyleProvider = Style()
         
-        title = NSAttributedString(string: "Run precisa de acesso ao App Saúde para salvar seus progressos",//Localization.permissionTitle,
+        title = NSAttributedString(string: "Run precisa de acesso ao App Saúde para salvar seus progressos",
                                    font: style.title2,
                                    color: style.textColor)
         flexibleHeight = false

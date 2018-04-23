@@ -13,9 +13,20 @@ public class ActivityView: UIView {
     var timeItem: ActivityViewItem = ActivityViewItem()
     var milhasItem: ActivityViewItem = ActivityViewItem()
     var pulseItem: ActivityViewItem = ActivityViewItem()
-    var actionFooter: ActivityViewFooter = ActivityViewFooter()
-
+    var actionFooter = ActivityViewFooter()
     
+    //MARK: - Timer
+    var zeroTime = TimeInterval()
+    var timer: Timer = Timer()
+    var userActivityState = UserActivityState.stop
+    var distanceTraveled = 0.0
+    
+    public var viewModel: ActivityViewModelProtocol = ActivityViewModel() {
+        didSet {
+            updateView()
+        }
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -23,6 +34,23 @@ public class ActivityView: UIView {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    func updateView() {
+        
+        pulseItem.descriptionLabel.text = "RÍTIMO MÉDIO"
+        pulseItem.detailLabel.text = "/MI"
+        
+        milhasItem.descriptionLabel.text = "DISTÂNCIA"
+        milhasItem.detailLabel.text = "KM"
+        
+        timeItem.descriptionLabel.text = "TEMPO"
+        timeItem.detailLabel.text = ""
+//        distanceLabel.text = "\(Double(viewModel.currentFitness.distance.value))"
+//        timeLabel.text = viewModel.currentFitness.time
+//        kmPerHourLabel.text = "\(Double(viewModel.currentFitness.kilometersPerHour.value))"
+//        caloriesLabel.text = "325 cal"
+        
     }
     
     func setupView() {
@@ -56,12 +84,15 @@ public class ActivityView: UIView {
         
         actionFooter.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
+        actionFooter.startButton.addTarget(self, action: #selector(startTap), for: .touchUpInside)
+        actionFooter.stopButton.addTarget(self, action: #selector(stopTap), for: .touchUpInside)
+        
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
         stackView.addArrangedSubview(timeItem)
-        stackView.addArrangedSubview(milhasItem)
         stackView.addArrangedSubview(pulseItem)
+        stackView.addArrangedSubview(milhasItem)
         stackView.addArrangedSubview(actionFooter)
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -73,6 +104,20 @@ public class ActivityView: UIView {
         stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
 
     }
+    
+    @objc func startTap() {
+        viewModel.didTapStartAction()
+    }
+    
+    @objc func stopTap() {
+        let fitness = Fitness(date: Date(),
+                              distance: viewModel.currentFitness.distance,
+                              kilometersPerHour: viewModel.currentFitness.kilometersPerHour,
+                              time: viewModel.currentFitness.time)
+        viewModel.didTapStopAction(fitness)
+    }
+
 
 }
+
 

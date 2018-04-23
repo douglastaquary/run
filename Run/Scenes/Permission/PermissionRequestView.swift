@@ -54,8 +54,7 @@ public class PermissionRequestView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setUp()
-    {
+    func setUp() {
         let contentView = UIView()
         contentView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(contentView)
@@ -117,7 +116,7 @@ public class PermissionRequestView: UIView {
                                          constant: -buttonPadding).isActive = true
         
         okButton.addTarget(self,
-                           action: #selector(AccessDeniedView.okTap),
+                           action: #selector(PermissionRequestView.okTap),
                            for: .touchUpInside)
     }
     

@@ -10,8 +10,7 @@ import UIKit
 
 extension NSAttributedString {
     
-    convenience init(string: String, font: UIFont?, color: UIColor?)
-    {
+    convenience init(string: String, font: UIFont?, color: UIColor?) {
         var attributes = [NSAttributedStringKey: Any]()
         
         if let font = font {
@@ -27,8 +26,7 @@ extension NSAttributedString {
     
     func highlight(string highlightString: String,
                    font: UIFont?,
-                   color: UIColor?) -> NSAttributedString
-    {
+                   color: UIColor?) -> NSAttributedString {
         guard highlightString.count != 0 else {
             return self
         }
