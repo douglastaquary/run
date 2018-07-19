@@ -28,20 +28,32 @@ extension RunMapViewController {
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            //locationManager.distanceFilter
+
         } else {
-            print("Need to Enable Location")
+            print("Need to Enablbree Location")
         }
         
-        let location = CLLocationCoordinate2D()
+        let location = CLLocationCoordinate2D(latitude: Double(-23.550001), longitude: Double(-46.636878))
         let viewRegion = MKCoordinateRegionMakeWithDistance(location, 1000, 1000)
         mapView.setRegion(viewRegion, animated: true)
+        mapView.showsUserLocation = true
     }
 }
 
 extension RunMapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("\(locations)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .authorizedWhenInUse:
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+
+        default:
+            break
+        }
     }
 
 }
